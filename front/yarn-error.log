@@ -1,23 +1,23 @@
-Arguments: 
+Arguments:
   /usr/local/bin/node /usr/local/Cellar/yarn/1.10.1/libexec/bin/yarn.js install
 
-PATH: 
+PATH:
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin
 
-Yarn version: 
+Yarn version:
   1.10.1
 
-Node version: 
+Node version:
   8.12.0
 
-Platform: 
+Platform:
   darwin x64
 
-Trace: 
+Trace:
   Error: getaddrinfo ENOTFOUND registry.yarnpkg.com registry.yarnpkg.com:443
       at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:67:26)
 
-npm manifest: 
+npm manifest:
   {
     "name": "smart-cafe",
     "version": "0.1.0",
@@ -75,7 +75,6 @@ npm manifest:
     "scripts": {
       "start": "node scripts/start.js",
       "build": "node scripts/build.js",
-      "test": "node scripts/test.js --env=jsdom"
     },
     "devDependencies": {
       "css-loader": "^1.0.0",
@@ -130,8 +129,8 @@ npm manifest:
     }
   }
 
-yarn manifest: 
+yarn manifest:
   No manifest
 
-Lockfile: 
+Lockfile:
   No lockfile
