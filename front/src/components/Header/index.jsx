@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import logo from '../../assets/Logo.png';
-import waiterImg from '../../assets/waiter.png';
-import cookImg from '../../assets/cook.png';
+import logo from '../../assets/img/Logo.png';
+import waiterImg from '../../assets/img/waiter.png';
+import cookImg from '../../assets/img/cook.png';
 import { headerTitle as title } from '../../assets/constants';
 import './style.less';
 

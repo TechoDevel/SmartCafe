@@ -5,17 +5,17 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import { devToolsEnhancer } from "redux-devtools-extension";
-import rootReducer from "./js/reducers/index";
+import rootReducer from "./reducer";
 
 import './defaultStyles.less';
 import Auth from './pages/Auth';
 import Cook from './pages/Cook';
 import Waiter from './pages/Waiter';
 
-const store = createStore(rootReducer, devToolsEnhancer());
-
+//const store = createStore(rootReducer, devToolsEnhancer());
+/*<Provider store={store}>*/
 ReactDOM.render(
-    <Provider store={store}>
+    <Provider>
         <BrowserRouter>
             <Switch>
                 <Route path='/login' component={Auth} />

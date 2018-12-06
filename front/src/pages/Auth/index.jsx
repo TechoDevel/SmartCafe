@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import SimpleButton from '../../components/SimpleButton';
 
 import './style.less';
-import logo from '../../assets/Logo.png';
+import logo from '../../assets/img/Logo.png';
 import { buttonText } from '../../assets/constants';
 
 export default class Auth extends Component {
