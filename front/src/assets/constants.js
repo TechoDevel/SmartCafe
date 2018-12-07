@@ -7,6 +7,7 @@ export const buttonText = {
 };
 
 export const orderInfo = {
+    price: "Цена:",
     title: "Заказ №",
     table: "Стол:",
     guestsCount: "Кол-во гостей:",

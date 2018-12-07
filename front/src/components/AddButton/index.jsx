@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 import './style.less';
 
+import CircleButton from '../CircleButton';
+
 export default class AddButton extends Component{
     render() {
         return (
-            <div className="add-btn">
-                <span className="add-btn__content">+</span>
-            </div>
+            <CircleButton classNameWrap="add" classNameContent="add-content"/>
         );
     }
 }

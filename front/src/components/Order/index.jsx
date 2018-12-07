@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types';
 
+import AddButton from '../AddButton';
+
 import './style.less';
 
 import foodImg from '../../assets/img/food.png';
@@ -11,6 +13,7 @@ import dataInfo from '../../testData/orderInfo.json';
 export default class Order extends Component {
     static propTypes = {
         order: PropTypes.shape({
+            price: PropTypes.number,
             table: PropTypes.number,
             guestsCount: PropTypes.number,
             description: PropTypes.array
@@ -25,10 +28,22 @@ export default class Order extends Component {
             <div className="order">
                 <img src={foodImg} alt="" className="order__img" />
                 <div className="order-info">
-                    <p className="order-info__title">{`${orderInfo.title} ${orderNumber}`}</p>
-                    <p className="order-info__text">{`${orderInfo.table} ${order.table}`}</p>
-                    <p className="order-info__text">{`${orderInfo.guestsCount} ${order.guestsCount}`}</p>
-                    <p className="order-info__text">{`${orderInfo.description} ${order.description.join(', ')}`}</p>
+                    <p className="order-info__item big">
+                        {`${orderInfo.title} ${orderNumber}`}
+                    </p>
+                    <p
+                        className="order-info__item big"
+                        dangerouslySetInnerHTML={{ __html: `${orderInfo.price} ${order.price} &#8381;` }}
+                    />
+                    <p className="order-info__item">
+                        {`${orderInfo.table} ${order.table}`}
+                    </p>
+                    <p className="order-info__item">
+                        {`${orderInfo.guestsCount} ${order.guestsCount}`}
+                    </p>
+                    <p className="order-info__item">
+                        {`${orderInfo.description} ${order.description.join(', ')}`}
+                    </p>
                 </div>
             </div>
         );
