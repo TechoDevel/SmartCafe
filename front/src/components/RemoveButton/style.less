@@ -1,0 +1,30 @@
+@import (reference) "../../defaultStyles.less";
+
+.remove {
+  width: 40px;
+  height: 40px;
+  background-color: @blue;
+  position: relative;
+  float: right;
+  top: 10px;
+  right: 10px;
+
+  &:before {
+    color: @trout;
+    position: absolute;
+    font-size: 40px;
+    font-weight: bolder;
+    top: 47%;
+    transform: translateY(-50%) translateX(-50%) rotate(45deg);
+    left: 53%;
+  }
+
+  &:hover {
+    background-color: @pink;
+  }
+
+  &:active {
+    background-color: @red;
+  }
+}
+

@@ -5,15 +5,16 @@ import './style.less';
 
 export default class CircleButton extends Component{
     static propTypes = {
-        classNameWrap: PropTypes.string,
-        classNameContent: PropTypes.string,
-    }
+        className: PropTypes.string,
+        onClick: PropTypes.func
+    };
 
     render() {
         return (
-            <div className={`btn ${this.props.classNameWrap}`}>
-                <span className={`content ${this.props.classNameWrap}`}>+</span>
-            </div>
+            <div
+                className={`btn ${this.props.className}`}
+                onClick={this.props.onClick}
+            />
         );
     }
 }

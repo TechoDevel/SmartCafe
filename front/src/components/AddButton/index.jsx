@@ -6,9 +6,13 @@ import './style.less';
 import CircleButton from '../CircleButton';
 
 export default class AddButton extends Component{
+    static propTypes = {
+        clickAction: PropTypes.func
+    };
+
     render() {
         return (
-            <CircleButton classNameWrap="add" classNameContent="add-content"/>
+            <CircleButton className="add" onClick={this.props.clickAction} />
         );
     }
 }

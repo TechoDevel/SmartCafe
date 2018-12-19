@@ -1,14 +1,14 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types';
 
-import AddButton from '../AddButton';
+import RemoveButton from '../../../../components/RemoveButton/index';
 
 import './style.less';
 
-import foodImg from '../../assets/img/food.png';
-import { orderInfo } from '../../assets/constants';
+import foodImg from '../../../../assets/img/food.png';
+import { orderInfo } from '../../../../assets/constants';
 
-import dataInfo from '../../testData/orderInfo.json';
+import dataInfo from '../../../../testData/orderInfo.json';
 
 export default class Order extends Component {
     static propTypes = {
@@ -26,7 +26,10 @@ export default class Order extends Component {
 
         return (
             <div className="order">
+                <RemoveButton />
+
                 <img src={foodImg} alt="" className="order__img" />
+
                 <div className="order-info">
                     <p className="order-info__item big">
                         {`${orderInfo.title} ${orderNumber}`}

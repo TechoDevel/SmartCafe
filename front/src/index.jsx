@@ -12,10 +12,9 @@ import Auth from './pages/Auth';
 import Cook from './pages/Cook';
 import Waiter from './pages/Waiter';
 
-//const store = createStore(rootReducer, devToolsEnhancer());
-/*<Provider store={store}>*/
+const store = createStore(rootReducer, devToolsEnhancer());
 ReactDOM.render(
-    <Provider>
+    <Provider store={store}>
         <BrowserRouter>
             <Switch>
                 <Route path='/login' component={Auth} />
@@ -24,4 +23,5 @@ ReactDOM.render(
                 <Route render={() => <Redirect to='/login' />}/>
             </Switch>
         </BrowserRouter>
-    </Provider>, document.getElementById('root'));
+    </Provider>, document.getElementById('root')
+);
