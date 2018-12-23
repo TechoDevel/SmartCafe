@@ -1,0 +1,23 @@
+@import (reference) "../../defaultStyles.less";
+
+.button {
+  background-color: @pink;
+  border-radius: 45px;
+  width: 120px;
+  height: 30px;
+  color: @martinique;
+  font-family: "Officina Serif", serif;
+  font-size: 17px;
+  border: none;
+  box-shadow: 0 2px 4px @black;
+
+  &:hover {
+    border: 3px ridge @trout;
+  }
+
+  &:active {
+    outline: none;
+    background-color: @martinique;
+    color: @pink;
+  }
+}

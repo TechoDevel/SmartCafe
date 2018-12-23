@@ -1,0 +1,28 @@
+@import (reference) "../../defaultStyles.less";
+
+.add {
+  width: 80px;
+  height: 80px;
+  background-color: @martinique;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  &:before {
+    color: white;
+    position: absolute;
+    font-size: 80px;
+    font-weight: bolder;
+    top: 44%;
+    transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+  }
+
+  &:hover {
+    box-shadow: 0 2px 4px @black;
+  }
+
+  &:active {
+    border: 8px groove @trout;
+  }
+}
